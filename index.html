@@ -6,62 +6,65 @@
 <title>Happy Birthday Amna 🎂</title>
 
 <style>
-
 body{
-font-family: Arial, sans-serif;
-margin:0;
-background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-text-align:center;
-color:white;
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    text-align:center;
+    color:white;
 }
 
+/* NAVIGATION */
 nav{
-background:#00000060;
-padding:15px;
-position:sticky;
-top:0;
-z-index:100;
+    background:#00000060;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:center;
+    flex-wrap:nowrap; /* links one line me */
 }
 
 nav a{
-color:white;
-margin:0 10px;
-text-decoration:none;
-font-weight:bold;
-font-size:16px;
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+    white-space:nowrap; /* wrap na ho */
 }
 
 section{
-padding:50px 20px;
+    padding:50px 20px;
 }
 
 button{
-padding:10px 20px;
-font-size:16px;
-border:none;
-border-radius:6px;
-background:#ff4d6d;
-color:white;
-cursor:pointer;
+    padding:10px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:6px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
 }
 
 /* STACKED CARDS */
-
 .photo-stack{
-position:relative;
-width:80%;
-max-width:280px;
-height:320px;
-margin:auto;
-cursor:pointer;
+    position:relative;
+    width:80%;
+    max-width:280px;
+    height:320px;
+    margin:50px auto; /* center align */
+    cursor:pointer;
 }
 
 .card{
-position:absolute;
-width:100%;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
-transition:0.5s;
+    position:absolute;
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.5s;
 }
 
 .card:nth-child(1){transform:rotate(-15deg);z-index:1;}
@@ -78,73 +81,69 @@ transition:0.5s;
 .card:nth-child(12){transform:rotate(12deg);z-index:12;}
 
 .card:hover{
-transform:scale(1.05);
-z-index:20;
+    transform:scale(1.05);
+    z-index:20;
 }
 
 /* FULL GALLERY */
-
 .gallery-full{
-display:none;
-flex-direction:column;
-align-items:center;
-gap:20px;
-margin-top:30px;
-animation: fadeIn 0.8s;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    margin-top:30px;
+    animation: fadeIn 0.8s;
 }
 
 .gallery-full img{
-width:90%;
-max-width:250px;
-border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
-transition:0.3s;
+    width:90%;
+    max-width:250px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
 }
 
 .gallery-full img:hover{
-transform:scale(1.05);
+    transform:scale(1.05);
 }
 
 @keyframes fadeIn{
-from{opacity:0;transform:translateY(20px)}
-to{opacity:1;transform:translateY(0)}
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
 }
 
 /* LETTER */
-
 .letter{
-max-width:90%;
-margin:auto;
-font-size:16px;
-line-height:1.8;
-text-align:left;
+    max-width:90%;
+    margin:auto;
+    font-size:16px;
+    line-height:1.8;
+    text-align:left;
 }
 
 /* SURPRISE */
-
 #surprise{
-display:none;
-font-size:20px;
-max-width:90%;
-margin:20px auto;
-line-height:1.6;
-animation: pop 1.2s infinite alternate;
+    display:none;
+    font-size:20px;
+    max-width:90%;
+    margin:20px auto;
+    line-height:1.6;
+    animation: pop 1.2s infinite alternate;
 }
 
 @keyframes pop{
-from{transform:scale(1)}
-to{transform:scale(1.1)}
+    from{transform:scale(1)}
+    to{transform:scale(1.1)}
 }
 
 /* BALLOONS */
-
 .balloon{
-position:fixed;
-bottom:-150px;
-width:50px;
-height:70px;
-border-radius:50%;
-animation: float 10s infinite;
+    position:fixed;
+    bottom:-150px;
+    width:50px;
+    height:70px;
+    border-radius:50%;
+    animation: float 10s infinite;
 }
 
 .balloon:nth-child(1){background:red;}
@@ -154,47 +153,51 @@ animation: float 10s infinite;
 .balloon:nth-child(5){background:pink;}
 
 @keyframes float{
-0%{bottom:-150px}
-100%{bottom:110%}
+    0%{bottom:-150px}
+    100%{bottom:110%}
 }
 
-/* MEDIA QUERIES FOR MOBILE */
-
+/* MOBILE RESPONSIVE */
 @media (max-width:600px){
 
+nav{
+    flex-wrap:wrap;
+}
+
 nav a{
-font-size:14px;
-margin:0 8px;
+    font-size:14px;
+    margin:5px;
 }
 
 button{
-font-size:14px;
-padding:8px 16px;
+    font-size:14px;
+    padding:8px 16px;
 }
 
 .letter{
-font-size:15px;
-line-height:1.7;
+    font-size:15px;
+    line-height:1.7;
 }
 
 .photo-stack{
-height:260px;
+    height:260px;
+    max-width:220px;
+    margin:40px auto;
 }
 
 .card{
-width:100%;
+    width:100%;
 }
 
 .gallery-full img{
-width:90%;
+    width:90%;
 }
 
 #surprise{
-font-size:18px;
+    font-size:18px;
 }
 
 }
-
 </style>
 </head>
 
@@ -221,7 +224,6 @@ font-size:18px;
 <br><br>
 
 <div class="photo-stack" onclick="openGallery()">
-
 <img src="1.jpeg" class="card">
 <img src="2.jpeg" class="card">
 <img src="3.jpeg" class="card">
@@ -234,7 +236,6 @@ font-size:18px;
 <img src="10.jpeg" class="card">
 <img src="11.jpeg" class="card">
 <img src="12.jpeg" class="card">
-
 </div>
 
 <div id="gallery" class="gallery-full">
@@ -255,7 +256,6 @@ font-size:18px;
 </div>
 
 </section>
-<br><br><br><br><br><br>
 
 <section id="letter">
 <h2>A Letter For You 💌</h2>
